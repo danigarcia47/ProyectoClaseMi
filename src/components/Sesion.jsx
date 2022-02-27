@@ -8,7 +8,6 @@ class Sesion extends React.Component {
     this.login = this.login.bind(this);
     this.inputUser = React.createRef();
     this.inputPassword = React.createRef();
-    this.inputEmail = React.createRef();
   }
 
   login() {
@@ -74,13 +73,9 @@ class Sesion extends React.Component {
     } else {
       return (
         <div className="main-site">
-          <h1>Inicia Sesión</h1>
+          <p/>
           <Container>
             <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Correo electrónico</Form.Label>
-                <Form.Control type="email" placeholder="Correo electrónico" ref={this.inputEmail}/>
-              </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Nombre de usuario</Form.Label>
                 <Form.Control type="email" placeholder="Usuario" ref={this.inputUser}/>
@@ -90,7 +85,7 @@ class Sesion extends React.Component {
                 <Form.Control type="password" placeholder="Contraseña" ref={this.inputPassword}/>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Recordarme" />
+                <Form.Check type="checkbox" label="Recuérdame" />
               </Form.Group>
               <Button variant="primary" type="button" onClick={this.login}>Login</Button>
             </Form>
@@ -103,7 +98,6 @@ class Sesion extends React.Component {
   componentWillUnmount(){
     localStorage.setItem('user', this.state.user);
     localStorage.setItem('pass', this.state.password);
-    localStorage.setItem('correo', this.state.email);
   }
 
 }
