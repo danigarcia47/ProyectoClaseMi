@@ -26,7 +26,7 @@ export const MenuItems = [
   {
     id: 4,
     path:'/api',
-    title: 'Datos F1',
+    title: 'Temporada 2021',
     component: Api,
   },
 ];
