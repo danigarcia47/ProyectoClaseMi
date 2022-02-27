@@ -1,0 +1,15 @@
+.margen{
+  margin-left: 3em;
+}
+
+.noticia {
+font-family: sans-serif;
+font-size: 18px;
+font-weight: 400;
+color: #2b2a2a;
+margin-left: 2em;
+}
+
+.img{
+max-width: 200px;
+}
