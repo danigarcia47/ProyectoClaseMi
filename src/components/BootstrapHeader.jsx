@@ -21,7 +21,7 @@ class BootstrapHeader extends React.Component {
               height=""
               className=""
             />{' '}
-            Proyecto en Grupo
+            F1 News
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse

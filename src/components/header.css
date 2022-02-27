@@ -21,6 +21,7 @@
 }
 
 .navbar-menu {
+  background: linear-gradient(90deg, #CA4022 40%, rgb(252, 252, 252));
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-gap: 10px;
