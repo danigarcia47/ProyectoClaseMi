@@ -1,8 +1,10 @@
 import React from 'react';
 
-export function Perfil(){
+class Perfil extends React.Component {
+render(){
     return (
       <div>
       </div>
     );
+}
 }

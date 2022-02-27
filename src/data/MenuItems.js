@@ -1,4 +1,5 @@
-import Home from '../components/Home';
+import Sesion from '../components/Sesion';
+import { Home } from '../components/Home';
 import { Perfil } from '../components/Perfil';
 
 
@@ -11,8 +12,14 @@ export const MenuItems = [
   },
   {
     id: 2,
+    path:'/iniciosesion',
+    title: 'Iniciar sesión',
+    component: Sesion,
+  },
+  {
+    id: 3,
     path:'/perfil',
-    title: 'Perfil',
+    title: 'Mi perfil',
     component: Perfil,
   },
 ];
