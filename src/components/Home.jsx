@@ -14,7 +14,7 @@ class Home extends React.Component {
   render() {
     return(
      <div class="margen">
-       <a class= "noticia" onClick={}>
+       <a class= "noticia" onClick={Noticia1.mostrar}>
         <h4 >Alpine: "No vamos a estar al fondo de la hoja de tiempos</h4>
         <img class= "img" src = "https://phantom-marca.unidadeditorial.es/8c4af9f6fc15b918ca08b7583fc38b87/resize/660/f/webp/assets/multimedia/imagenes/2022/02/26/16458953098494.jpg"/>
         <hr/>
