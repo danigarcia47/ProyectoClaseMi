@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 class Home extends React.Component {
 
+  state = {
+    noticias : []
+  }
+
   componentDidMount(){
     this.consultaNoticias();
   }
@@ -14,15 +18,16 @@ class Home extends React.Component {
       return respuesta.json();
     })
     .then(noticias => {
-
+      console.log(noticias)
+      this.setState({
+        noticias: noticias.articles
+      })
     })
   }
 
   render() {
     return(
-     <div className = "container">
-
-     </div>
+     <div></div>
     );
   }
 
