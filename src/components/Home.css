@@ -13,3 +13,37 @@ margin-left: 2em;
 .img{
 max-width: 200px;
 }
+
+.mbsc-cloak{
+  visibility:hidden !important;
+}
+.mbsc-empty{
+  text-align:center;
+  margin:3em;
+  color:inherit
+}
+.mbsc-empty h3{
+  margin:.666666em 0;
+  padding:0;
+  color:inherit;
+  font-size:1.5em;
+  font-weight:normal;
+  font-family:inherit
+}
+.mbsc-empty p{
+  margin:1em 0;
+  padding:0;
+  font-size:1em;
+  line-height:1.5
+}
+.mbsc-anim-trans .mbsc-fr-scroll{
+  overflow:hidden
+}
+.mbsc-anim-trans-flip .mbsc-fr-persp,.mbsc-anim-trans-swing .mbsc-fr-persp{
+  -webkit-perspective:1000px;
+  perspective:1000px
+}
+.mbsc-anim-trans .mbsc-fr-popup,.mbsc-anim-trans .mbsc-fr-overlay{
+  -webkit-animation-fill-mode:forwards;
+  animation-fill-mode:forwards
+}
