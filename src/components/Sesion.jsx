@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container , Form, Button } from 'react-bootstrap';
+import { DatosTablaUsuario }from '../data/DatosUsuario.js';
 
 class Sesion extends React.Component {
   constructor (props) {
@@ -14,8 +15,28 @@ class Sesion extends React.Component {
     this.setState({
       user: this.inputUser.current.value,
       password: this.inputPassword.current.value,
-      email: this.inputEmail.current.value,
     });
+  }
+
+  registro() {
+    <div className="main-site">
+    <h1>Inicio sesión</h1>
+    <Container>
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Nombre de usuario</Form.Label>
+          <Form.Control type="email" placeholder="Usuario" ref={this.inputUser}/>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Contraseña: </Form.Label>
+          <Form.Control type="password" placeholder="Contraseña" ref={this.inputPassword}/>
+        </Form.Group>
+        <Button variant="primary" type="button" onClick={this.login}>Login</Button>
+        <p/>
+        <Button variant="primary" type="button" onClick={this.registro}>Regístrame</Button>
+      </Form>
+    </Container>
+  </div>
   }
 
   recargar() {
@@ -29,68 +50,20 @@ class Sesion extends React.Component {
   }
 
   render() {
-    if (this.state !== null && this.state.user !== null && this.state.user !== '') {
-      if (this.state !== null && this.state.user !== 'Dani' && this.state.password !== '12345'){
-        return (
-          <div className="main-site">
-            <h1>Usuario no encontrado</h1>
-            <p/>
-            <h2>Por favor, vuelva a intentarlo</h2>
-            <Button variant="primary" type="button" onClick={this.recargar}>Volver a Home</Button>
-          </div>
+    if(this.state.user == DatosTablaUsuario.usuario && this.state.password == DatosTablaUsuario.pass){
+      return(
+        this.bienvenido
+      );
+    }else{
+      if(this.state.password != DatosTablaUsuario.pass){
+        return(
+          this.incorrecto
         );
-      }else {
-        if (this.state == null && this.state.user == 'Dani' && this.state.password !== '12345'){
-          return (
-            <div className="main-site">
-              <h1>Usuario no encontrado</h1>
-              <p/>
-              <h2>Por favor, vuelva a intentarlo</h2>
-              <Button variant="primary" type="button" onClick={this.recargar}>Volver a Home</Button>
-            </div>
-          );
-        }else{
-          if (this.state !== null && this.state.user !== 'Dani' && this.state.password == '12345'){
-            return (
-              <div className="main-site">
-                <h1>Usuario no encontrado</h1>
-                <p/>
-                <h2>Por favor, vuelva a intentarlo</h2>
-                <Button variant="primary" type="button" onClick={this.recargar}>Volver a Home</Button>
-              </div>
-            );
-          }else{
-            return (
-              <div className="main-site">
-                <h1>Bienvenido {this.state.user}!</h1>
-                <p/>
-                <Button variant="primary" type="button" onClick={this.recargar}>Cerrar Sesión</Button>
-              </div>
-            );
-          }
-        }
+      } else{
+        this.registro
       }
-    } else {
-      return (
-        <div className="main-site">
-          <p/>
-          <Container>
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Nombre de usuario</Form.Label>
-                <Form.Control type="email" placeholder="Usuario" ref={this.inputUser}/>
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Contraseña: </Form.Label>
-                <Form.Control type="password" placeholder="Contraseña" ref={this.inputPassword}/>
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Recuérdame" />
-              </Form.Group>
-              <Button variant="primary" type="button" onClick={this.login}>Login</Button>
-            </Form>
-          </Container>
-        </div>
+      return(
+        this.registro
       );
     }
   }
@@ -98,6 +71,43 @@ class Sesion extends React.Component {
   componentWillUnmount(){
     localStorage.setItem('user', this.state.user);
     localStorage.setItem('pass', this.state.password);
+  }
+
+  inicio(){
+    <div className="main-site">
+    <h1>Inicio sesión</h1>
+    <Container>
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Nombre de usuario</Form.Label>
+          <Form.Control type="email" placeholder="Usuario" ref={this.inputUser}/>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Contraseña: </Form.Label>
+          <Form.Control type="password" placeholder="Contraseña" ref={this.inputPassword}/>
+        </Form.Group>
+        <Button variant="primary" type="button" onClick={this.login}>Login</Button>
+        <p/>
+        <Button variant="primary" type="button" onClick={this.registro}>Regístrame</Button>
+      </Form>
+    </Container>
+  </div>
+  }
+
+  bienvenido(){
+    <div className="main-site">
+    <h1>Bienvenido {this.state.user}!</h1>
+    <p/>
+    <Button variant="primary" type="button" onClick={this.recargar}>Cerrar Sesión</Button>
+  </div>
+  }
+
+  incorrecto(){
+    <div className="main-site">
+    <h1>Usuario o contraseña incorrecto {this.state.user}!</h1>
+    <p/>
+    <Button variant="primary" type="button" onClick={this.recargar}>Recargar</Button>
+  </div>
   }
 
 }
