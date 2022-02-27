@@ -21,7 +21,7 @@ class BootstrapHeader extends React.Component {
               height=""
               className=""
             />{' '}
-            <a className = "navbar-brand text-bold m-2" href="/">Noticias del mundo</a>
+            <a className = "navbar-brand text-bold m-2" href="/">Noticias F1</a>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse
