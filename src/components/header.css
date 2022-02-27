@@ -1,5 +1,5 @@
 .header-navbar {
-  background: linear-gradient(90deg, #ffffff 40%, rgb(165, 158, 158));
+  background: linear-gradient(90deg, #CA4022 40%, rgb(252, 252, 252));
   height: 80px;
   display: flex;
   justify-content: center;
@@ -8,7 +8,7 @@
 }
 
 .navbar-logo {
-  color: #312f2f;
+  color: #2b2b2b;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -17,12 +17,6 @@
 .logo-image {
   width: 137px;
   height: 46px;
-  vertical-align: middle;
-}
-
-.fa-user-graduate {
-  margin-left: 0.5rem;
-  font-size: 1.6rem;
   vertical-align: middle;
 }
 
@@ -44,7 +38,7 @@
 }
 
 .navbar-link:hover {
-  background-color: #2d2d38;
+  background-color: #1b1b99;
   font-weight: bold;
   color: #ffffff;
   border-radius: 4px;
@@ -53,7 +47,7 @@
 
 .navbar-link-profile {
   color: #ffffff;
-  background-color: #181223;
+  background-color: #191027;
   text-decoration: none;
   border-radius: 4px;
   padding: 0.5rem 1rem;
