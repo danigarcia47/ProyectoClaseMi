@@ -1,6 +1,7 @@
 import Sesion from '../components/Sesion';
 import  Home  from '../components/Home';
 import  Perfil from '../components/Perfil';
+import Api from '../components/Api';
 
 
 export const MenuItems = [
@@ -21,6 +22,12 @@ export const MenuItems = [
     path:'/perfil',
     title: 'Mi perfil',
     component: Perfil,
+  },
+  {
+    id: 4,
+    path:'/api',
+    title: 'Datos F1',
+    component: Api,
   },
 ];
 
