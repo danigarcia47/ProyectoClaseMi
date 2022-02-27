@@ -7,7 +7,6 @@ class Api extends React.Component {
   constructor(props) {
     super(props);
     this.state = { selectedItem: '', tableData: [] };
-    this.inputAño = React.createRef();
   }
 
   changeSelected = (item) => {
@@ -20,23 +19,10 @@ class Api extends React.Component {
     this.setState({ tableData: responseData, selectedItem: responseData[0] });
   }
 
-  buscar() {
-    this.setState({
-      año: this.inputAño.current.value,
-    });
-  }
-
   render(){
       return (
         <div className="main-site">
-          <Form.Group className="mb-3">
-                <Form.Label>Introduce año</Form.Label>
-                <Form.Control type="text" placeholder="Año" ref={this.inputAño}/>
-          </Form.Group>
-          <Button onClick={this.buscar}>Mostrar</Button>
-          <p/>
-        
-          <h3>Pilotos de la temporada {this.state.año}</h3>
+          <h3>Pilotos de la temporada 2021</h3>
           <Container>
             <Row>
               <Col>
