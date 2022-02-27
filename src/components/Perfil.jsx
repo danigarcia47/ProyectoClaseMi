@@ -1,4 +1,5 @@
 import React from 'react';
+import { DatosTablaUsuario }from '../data/DatosUsuario.js';
 
 class Perfil extends React.Component {
 
