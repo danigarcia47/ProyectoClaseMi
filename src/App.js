@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import BootstrapHeader from './components/BootstrapHeader';
@@ -21,3 +21,4 @@ export function App() {
     </Router>
   );
 }
+
