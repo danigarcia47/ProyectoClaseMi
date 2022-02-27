@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 
-import Noticia1 from './Noticia1.jsx';
-import Noticia2 from './Noticia2.jsx';
-import Noticia3 from './Noticia3.jsx';
-import Noticia4 from './Noticia4.jsx';
-import Noticia5 from './Noticia5.jsx';
-import Noticia6 from './Noticia6.jsx';
-
+import { Noticias } from '../data/Noticias';
 import './Home.css'
 
 class Home extends React.Component {
