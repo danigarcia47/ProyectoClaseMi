@@ -1,5 +1,5 @@
 import Sesion from '../components/Sesion';
-import { Home } from '../components/Home';
+import  Home  from '../components/Home';
 import { Perfil } from '../components/Perfil';
 
 

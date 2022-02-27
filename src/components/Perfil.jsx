@@ -1,9 +1,6 @@
 import React from 'react';
 
 class Perfil extends React.Component {
-  constructor (props) {
-    super(props);
-  }
 
   render(){
       return (
@@ -13,3 +10,4 @@ class Perfil extends React.Component {
       );
   }
 }
+export default Perfil;
