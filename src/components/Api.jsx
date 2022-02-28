@@ -1,7 +1,6 @@
 import React from 'react';
 import uuid from 'react-uuid';
-import { Form, Card, Container, Table, Row, Col } from 'react-bootstrap';
-import Button from 'react-bootstrap/esm/Button';
+import { Container, Table, Row, Col } from 'react-bootstrap';
 
 class Api extends React.Component {
   constructor(props) {
